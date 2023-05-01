@@ -1,0 +1,61 @@
+
+.conteudo {
+    max-width: max-content; /* faz ocupar o máximo espaço disponível */
+    margin: 0 auto;
+}
+
+.conteudo > h1 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 72px;
+}
+
+.formacao {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+li > h2 {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* --------------------------------- */
+.sk-cms {
+    padding: 8px 0;
+}
+
+.progress {
+    --progress: 0%;
+    
+    width: 530px;
+    height: 24px;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #aaa;
+    border-radius: 32px;
+  }
+  
+  .progress .bar {
+    width: var(--progress);
+    border-radius: 32px;
+    height: 100%;
+    background: #333;
+    background-repeat: repeat;
+
+    transition: width 1s  1s;
+  }
+
+  @media(max-width: 980px) {
+    .main-skills {
+        margin-top: 72px;
+        padding: 32px 32px;
+        min-height: calc(100vh - 72px);
+    }
+
+    .progress {
+        width: 300px;
+    }
+}

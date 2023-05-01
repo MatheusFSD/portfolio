@@ -1,0 +1,99 @@
+@import url(/style/style.css);
+
+header {
+    display: none;
+
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1;
+}
+
+.menuhamburger {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    right: -100%;
+    margin-top: 16px;
+    padding: 16px 32px;
+    
+    transition: 1s;
+
+}
+
+.menuhamburger-ativado {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    margin-top: 16px;
+    padding: 16px 32px;
+
+    transition: 1s;
+    
+}
+
+.menuhamburger-itens-texto{
+    text-decoration: none;
+    color: var(--cor-principal);
+}
+
+.cabecalho > div > p:first-child {
+    font-weight: 600;
+}
+
+.menuhamburger-itens > li {
+    display: block;
+    list-style-type: none;
+    padding: 16px;
+    font-size: 24px;
+}
+
+/* mascara que torna o bachground do main preto quando ativado o menu */
+.mascaramenu-ativado {
+    background: linear-gradient(159.02deg, rgba(31, 31, 31, 0.9) 9.93%, rgba(255, 255, 255, 0) 130.65%);
+    transition: .7s;
+}
+
+.menu-linkedin{
+    margin-top: 32px;
+    display: block;
+}
+
+
+
+@keyframes slidein {
+    from {
+        
+        transform: translateX(300px);
+    }
+  
+    to {
+        
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideout {
+    from {
+        /* opacity: 100%; */
+        transform: translateX(100%);
+    }
+  
+    to {
+        /* opacity: 0%; */
+        transform: translateX(0);
+    }
+}
+
+@media(max-width: 980px) {
+    header {
+        display: flex;
+    }
+}

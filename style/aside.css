@@ -1,0 +1,90 @@
+@import url(/style/style.css);
+
+aside {
+    background-color: var(--cor-principal);
+    position: sticky;  /* como? */
+    top: 0;
+    height: 100vh; /*precisamos especificar 100vh na altura, pois na largura ele já faz isso*/
+    padding: 32px;
+    box-sizing: border-box;
+
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-container {
+    display: flex;
+    flex-grow: 1; /* faz ocupar o espaço restante, mas o pai precisa ser flex também. */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.perfil {
+    margin-bottom: 16px;
+    color: var(--cor-fonte);
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.perfil-container > p {
+    font-size: 16px;
+}
+
+.perfil-container > p:first-child {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.perfil-localizacao {
+    display: flex;
+    gap: 8px;
+}
+
+.menu {
+    font-size: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-item {
+    padding: 16px 16px;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--cor-fonte);
+    transition: all .4s ;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-item:hover {
+    background-color: #d5d7da;
+    width: 110%;
+}
+
+.redessociais {
+    display: flex;
+    gap: 16px;
+}
+
+a > img {
+    width: 45px;
+}
+
+@media(max-width: 980px) {
+    aside {
+        display: none;
+    }
+}
